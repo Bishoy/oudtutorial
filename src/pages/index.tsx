@@ -152,6 +152,9 @@ const IndexPage = () => {
         Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
         page update in real-time. 😎
       </p>
+      <a href="/Lesson1"
+          >test lini</a>
+
       <ul style={listStyles}>
         <li style={docLinkStyle}>
           <a

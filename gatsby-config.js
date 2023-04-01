@@ -38,6 +38,15 @@ module.exports = {
       name: `locale`
     }
   },
+  // this plugin handles lang extensions
+  {
+    resolve: 'gatsby-plugin-i18n',
+    options: {        
+      langKeyDefault: 'en',
+      useLangKeyLayout: false
+    }
+  },
+  // this one translates into the components
   {
     resolve: `gatsby-plugin-react-i18next`,
     options: {
@@ -61,10 +70,6 @@ module.exports = {
           matchPath: '/:lang?/blog/:uid',
           getLanguageFromPath: true,
           excludeLanguages: ['es']
-        },
-        {
-          matchPath: '/preview',
-          languages: ['en']
         }
       ]
     }
