@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  repo: ti10-dev/oudtutorial
+  branch: master # Branch to update (optional; defaults to master)
+
+publish_mode: editorial_workflow
+media_folder: 'static/images/uploads'
+local_backend: true
+site_url: https://oudtutorial.com
+
+collections:
+  - name: 'lessons' # Used in routes, e.g., /admin/collections/blog
+    label: 'Lessons'
+    folder: 'src/pages/lessons'
+    create: true
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
